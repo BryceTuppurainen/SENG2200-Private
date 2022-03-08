@@ -54,16 +54,16 @@ X <= Y < Z - case three (else-if)
 Z < Y <= X - case four (else-if)
 NO OTHER CONDITIONS - case five
 
-There is no way to satisfy more than one case at once due to the elses, therefore five required tests
+There is no way to satisfy more than one 'case' at once due to the elses, therefore five required tests
 ```
 
-1. Test cases for ~80% Statement Branch and Path Coverage (100% is impossible):
+1. Test cases for 100% Statement Branch and Path Coverage:
 
-   - t1:{x=1,y=1,z=1} - All Equal
-   - t2:{x=1,y=2,z=1} - Not all equal, and Y is larger
-   - t3:{x=1,y=1,z=2} - Not all equal, and Z is larger
-   - BUG : Unreachable Statement, cases FOUR and NOT-TWO DON'T EXIST
-   - t5:{x=3,y=1,z=1}
+   - t1:{x=1,y=1,z=1} - All Equal OR Y, X, Z
+   - t2:{x=2,y=3,z=1} - Z, X, Y
+   - t3:{x=1,y=2,z=3} - X, Y, Z
+   - t4:{x=1,y=2,z=3} - Z, Y, X
+   - t5:{x=3,y=1,z=2} - Y, Z, X
 
 2. Yes, statement on line-8 forms a contidiction with not line-4 and as such line-9 is unreachable
 
